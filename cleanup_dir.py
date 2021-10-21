@@ -31,7 +31,8 @@ if(len(sys.argv) > 0):
             cleanse_dir = sys.argv[x+1] 
             dirspecified = True
         elif(sys.argv[x] == "-c"):
-            cleanse == True
+            
+            cleanse = True
 if(not dirspecified):
     print("Run cleanup_dir.py -h for how to use this. No directory specified.")
     sys.exit(1)
@@ -44,7 +45,7 @@ dirs = glob(cleanse_dir + "/*/")
 for x in range(0, len(dirs)):
     size = get_size(dirs[x])
     print(dirs[x][len(cleanse_dir):] + " : " + str(size))
-    if(size == 0 and cleanse):
+    if((size == 0) and cleanse):
         print("\t\tDeleting " +  dirs[x][len(cleanse_dir):])
         try:
             shutil.rmtree(dirs[x])
