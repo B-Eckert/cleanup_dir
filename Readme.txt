@@ -9,3 +9,8 @@ Usage: cleanup_dir.py [-h] -i <directory> [-c]
 -i is the directory flag
 -h is the help flag
 -c is the cleanse flag
+--kb is the kilobytes flag
+--mb is the megabytes flag
+--gb is the gigabytes flag
+
+By default, data is desplayed in bytes.
